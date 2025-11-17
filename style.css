@@ -1,0 +1,381 @@
+/* Importação da fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --color-black: #0D0D0D;
+    --color-dark-gray: #1A1A1A;
+    --color-silver: #C0C0C0;
+    --color-silver-shine: #E0E0E0;
+    --color-accent: #FFFFFF; /* Para texto e brilho */
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-silver);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-silver);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+h1, h2, h3 {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+}
+
+/* ---------------------------------- */
+/* HEADER & LOGO             */
+/* ---------------------------------- */
+
+header {
+    background-color: var(--color-dark-gray);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(192, 192, 192, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 60px;
+    transition: transform var(--transition-speed);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------------------- */
+/* HERO - PROFILE            */
+/* ---------------------------------- */
+
+.hero {
+    padding: 50px 5%;
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-dark-gray) 0%, var(--color-black) 100%);
+}
+
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+    border: 5px solid var(--color-silver-shine);
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.5); /* Efeito glow prateado */
+}
+
+.bio {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--color-silver);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ---------------------------------- */
+/* SERVICES               */
+/* ---------------------------------- */
+
+.services {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--color-dark-gray);
+    border: 1px solid var(--color-silver);
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all var(--transition-speed) ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-silver-shine);
+    box-shadow: 0 0 25px rgba(192, 192, 192, 0.8); /* Glow forte no hover */
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--color-silver);
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 15px 0 5px;
+    color: var(--color-accent);
+}
+
+.card p {
+    font-weight: 600;
+    color: var(--color-silver-shine);
+    margin-bottom: 15px;
+}
+
+/* ---------------------------------- */
+/* VIDEO SLIDER             */
+/* ---------------------------------- */
+
+.video-slider {
+    padding: 50px 0;
+    text-align: center;
+    background-color: var(--color-dark-gray);
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    /* Ajuste para centralizar o vídeo principal */
+    width: 100%; 
+    max-width: 900px; /* Largura máxima do slider */
+}
+
+.slider video {
+    min-width: 100%;
+    height: 60vh; /* Altura responsiva */
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.2);
+}
+
+/* ---------------------------------- */
+/* FOOTER                */
+/* ---------------------------------- */
+
+footer {
+    background-color: var(--color-dark-gray);
+    padding: 20px 5%;
+    text-align: center;
+    border-top: 1px solid rgba(192, 192, 192, 0.2);
+}
+
+.socials img {
+    width: 35px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+/* ---------------------------------- */
+/* PÁGINA DE AGENDAMENTO         */
+/* ---------------------------------- */
+
+.mini-slider {
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.mini-slider video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-dark-gray);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+}
+
+.container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--color-silver-shine);
+}
+
+.container input[type="text"],
+.container input[type="date"],
+.container input[type="time"],
+.container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-silver);
+    color: var(--color-accent);
+    border-radius: 5px;
+    transition: border-color var(--transition-speed);
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+.container input:focus,
+.container select:focus {
+    border-color: var(--color-silver-shine);
+    outline: none;
+}
+
+.payment-section {
+    padding: 20px 0;
+    border-top: 1px solid rgba(192, 192, 192, 0.1);
+    margin-top: 30px;
+}
+
+.pix-area {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-silver);
+    border-radius: 5px;
+    display: none; /* Escondido por padrão */
+}
+
+.pix-info-title {
+    font-weight: 600;
+    color: var(--color-silver-shine);
+    margin-bottom: 15px;
+}
+
+.btn-pix {
+    padding: 12px;
+    background-color: var(--color-silver-shine);
+    color: var(--color-black);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-pix:hover {
+    background-color: var(--color-accent);
+}
+
+.whatsapp-instruction {
+    margin-top: 20px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.wpp-link {
+    color: #25D366; /* Cor verde do WhatsApp */
+    font-weight: 600;
+    display: block;
+    margin-top: 5px;
+    text-decoration: underline;
+}
+
+/* Botão Principal */
+button#confirmarButton {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-silver);
+    color: var(--color-black);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    margin-top: 20px;
+}
+
+button#confirmarButton:hover {
+    background-color: var(--color-silver-shine);
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.8);
+}
+
+/* ---------------------------------- */
+/* RESPONSIVIDADE           */
+/* ---------------------------------- */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    header {
+        padding: 10px 5%;
+    }
+    .logo {
+        width: 50px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    .cards {
+        gap: 20px;
+    }
+    .card {
+        width: 90%; /* Ocupa quase a largura total no mobile */
+        max-width: 350px;
+    }
+    .slider video {
+        height: 40vh;
+    }
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
