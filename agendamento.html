@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamento - Manoella Beauty</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="img/logo_prata.png" class="logo" alt="Voltar para Home">
+  </a>
+  <h1>Agendamento</h1>
+</header>
+
+<div class="mini-slider">
+  <video muted loop autoplay playsinline></video>
+</div>
+
+<div class="container">
+  <h2>Selecione o Serviço</h2>
+
+  <select id="servico">
+    <option value="Tufos Tecnológicos 4D">Tufos Tecnológicos 4D — R$75</option>
+    <option value="Volume BO$$">Volume BO$$ — R$70</option>
+    <option value="Volume Luxo">Volume Luxo — R$65</option>
+    <option value="Volume Glamour">Volume Glamour — R$65</option>
+    <option value="Volume Priss">Volume Priss — R$60</option>
+    <option value="Volume Classic">Volume Classic — R$50</option>
+    <option value="Tufos Brasileiro">Tufos Brasileiro — R$65</option>
+    <option value="Design com Henna">Design com Henna — R$30</option>
+  </select>
+
+  <label for="nome">Nome Completo</label>
+  <input type="text" id="nome" required>
+
+  <label for="data">Data</label>
+  <input type="date" id="data" required>
+
+  <label for="hora">Hora</label>
+  <input type="time" id="hora" required>
+
+  <div class="payment-section">
+    <h3>Pagamento</h3>
+    <p>Escolha uma forma de pagamento:</p>
+
+    <select id="selectPagamento" required>
+      <option value="PIX">PIX - 50% antecipado (Recomendado)</option>
+      <option value="Pagar no local">Pagar no local (No valor total)</option>
+    </select>
+
+    <div class="pix-area" id="pixArea">
+      <p class="pix-info-title">Pagamento de 50% antecipado (PIX/Cartão):</p>
+      
+      <button id="pagarNubank" class="btn-pix" type="button">
+          Pagar 50% Agora (Nubank)
+      </button>
+      
+      <p class="whatsapp-instruction">
+          Após o pagamento, <strong>envie o comprovante</strong> via WhatsApp para 
+          confirmar sua vaga: 
+          <a href="#" id="wppLink" target="_blank" class="wpp-link">Enviar Comprovante (WhatsApp)</a>
+      </p>
+    </div>
+  </div>
+
+  <button id="confirmarButton">Confirmar Agendamento</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
